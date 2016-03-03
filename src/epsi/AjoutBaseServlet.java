@@ -7,6 +7,10 @@ import javax.servlet.http.*;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.taskqueue.Queue;
+import com.google.appengine.api.taskqueue.QueueFactory;
+import com.google.appengine.api.taskqueue.TaskOptions;
+import com.google.appengine.api.taskqueue.TaskOptions.Method;
 
 @SuppressWarnings("serial")
 public class AjoutBaseServlet extends HttpServlet {
@@ -19,11 +23,8 @@ public class AjoutBaseServlet extends HttpServlet {
 		String a = req.getParameter("age");
 		int age = Integer.parseInt(a);
 		
-		DatastoreService dataStore = DatastoreServiceFactory.getDatastoreService();
-		Entity etudiant = new Entity("Etudiant");
-		etudiant.setProperty("nom", nom);
-		etudiant.setProperty("age", age);
-		dataStore.put(etudiant);
+		Queue queue = QueueFactory.getDefaultQueue();
+		queue.add(TaskOptions.Builder.withUrl("/tacheDeFond").method(Method.POST).param("nom", nom).param("age", a));
 		
 		resp.setContentType("text/plain");
 		resp.getWriter().println("Hello, world");

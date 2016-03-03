@@ -16,6 +16,19 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	
 	<servlet>
+		<servlet-name>TacheDeFond</servlet-name>
+		<servlet-class>epsi.CalculTacheDeFondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TacheDeFond</servlet-name>
+		<url-pattern>/tacheDeFond</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	<servlet>
 		<servlet-name>AjoutBase</servlet-name>
 		<servlet-class>epsi.AjoutBaseServlet</servlet-class>
 	</servlet>
