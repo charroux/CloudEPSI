@@ -39,11 +39,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	
 	<servlet>
-		<servlet-name>Requete</servlet-name>
+		<servlet-name>Requete1</servlet-name>
 		<servlet-class>epsi.RequeteServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Requete</servlet-name>
+		<servlet-name>Requete1</servlet-name>
 		<url-pattern>/urlRequeteServlet</url-pattern>
 	</servlet-mapping>	
 	
