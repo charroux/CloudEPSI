@@ -21,7 +21,7 @@ public class AjoutBaseServlet extends HttpServlet {
 	
 		String nom = req.getParameter("nom");
 		String a = req.getParameter("age");
-		int age = Integer.parseInt(a);
+		int age1 = Integer.parseInt(a);
 		
 		Queue queue = QueueFactory.getDefaultQueue();
 		queue.add(TaskOptions.Builder.withUrl("/tacheDeFond").method(Method.POST).param("nom", nom).param("age", a));

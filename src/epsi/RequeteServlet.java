@@ -28,7 +28,7 @@ public class RequeteServlet extends HttpServlet {
 			System.out.println(entity.getProperty("nom"));
 		}
 		
-		System.out.println("Je suis dans la RequeteServlet");
+		System.out.println("Je suis dans RequeteServlet");
 		
 		
 	}

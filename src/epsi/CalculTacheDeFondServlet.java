@@ -15,7 +15,7 @@ public class CalculTacheDeFondServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {	
 		
-		System.out.println("Je suis la tache de fond");
+		System.out.println("Je suis dans la tache de fond");
 	
 		String nom = req.getParameter("nom");
 		String a = req.getParameter("age");
