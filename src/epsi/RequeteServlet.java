@@ -30,6 +30,7 @@ public class RequeteServlet extends HttpServlet {
 		
 		System.out.println("Je suis dans RequeteServlet");
 		
+		resp.sendRedirect("index.html");
 		
 	}
 }

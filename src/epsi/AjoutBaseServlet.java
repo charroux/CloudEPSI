@@ -26,8 +26,7 @@ public class AjoutBaseServlet extends HttpServlet {
 		Queue queue = QueueFactory.getDefaultQueue();
 		queue.add(TaskOptions.Builder.withUrl("/tacheDeFond").method(Method.POST).param("nom", nom).param("age", a));
 		
-		resp.setContentType("text/plain");
-		resp.getWriter().println("Hello, world");
+		resp.sendRedirect("index.html");
 		
 		
 	}
